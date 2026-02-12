@@ -1,0 +1,5 @@
+set tool_name "ModelSim-Altera (VHDL)"
+set corner_file_list {
+	{{"Slow Model"} {ContorladorusFPGArusCoretrecus.vho ContorladorusFPGArusCoretrecus_vhd.sdo}}
+	{{"Fast Model"} {ContorladorusFPGArusCoretrecus_fast.vho ContorladorusFPGArusCoretrecus_vhd_fast.sdo}}
+}

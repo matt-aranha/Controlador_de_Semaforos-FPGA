@@ -1,0 +1,98 @@
+|top
+GPIO_0[0] <> semaforo_cruzamento_completo:semaforo.reset
+GPIO_0[1] <> semaforo_cruzamento_completo:semaforo.botao_A
+GPIO_0[2] <> semaforo_cruzamento_completo:semaforo.botao_B
+GPIO_0[3] <> <UNC>
+GPIO_0[4] <> <UNC>
+GPIO_0[5] <> <UNC>
+GPIO_0[6] <> <UNC>
+GPIO_0[7] <> <UNC>
+GPIO_0[8] <> semaforo_cruzamento_completo:semaforo.light_A
+GPIO_0[9] <> semaforo_cruzamento_completo:semaforo.light_A
+GPIO_0[10] <> semaforo_cruzamento_completo:semaforo.light_A
+GPIO_0[11] <> <UNC>
+GPIO_0[12] <> semaforo_cruzamento_completo:semaforo.p_light_A
+GPIO_0[13] <> semaforo_cruzamento_completo:semaforo.p_light_A
+GPIO_0[14] <> <UNC>
+GPIO_0[15] <> <UNC>
+GPIO_0[16] <> <UNC>
+GPIO_0[17] <> <UNC>
+GPIO_0[18] <> semaforo_cruzamento_completo:semaforo.light_B
+GPIO_0[19] <> semaforo_cruzamento_completo:semaforo.light_B
+GPIO_0[20] <> semaforo_cruzamento_completo:semaforo.light_B
+GPIO_0[21] <> semaforo_cruzamento_completo:semaforo.light_B
+GPIO_0[22] <> <UNC>
+GPIO_0[23] <> semaforo_cruzamento_completo:semaforo.p_light_B
+GPIO_0[24] <> semaforo_cruzamento_completo:semaforo.p_light_B
+GPIO_0[25] <> <UNC>
+GPIO_0[26] <> <UNC>
+GPIO_0[27] <> <UNC>
+GPIO_0[28] <> <UNC>
+GPIO_0[29] <> <UNC>
+GPIO_0[30] <> <UNC>
+GPIO_0[31] <> <UNC>
+CLOCK_50 => CLOCK_50.IN1
+
+
+|top|clk_filter:clock_filter
+clk => clk_counter[0].CLK
+clk => clk_counter[1].CLK
+clk => clk_counter[2].CLK
+clk => clk_counter[3].CLK
+clk => clk_counter[4].CLK
+clk => clk_counter[5].CLK
+clk => clk_counter[6].CLK
+clk => clk_counter[7].CLK
+clk => clk_counter[8].CLK
+clk => clk_counter[9].CLK
+clk => clk_counter[10].CLK
+clk => clk_counter[11].CLK
+clk => clk_counter[12].CLK
+clk => clk_counter[13].CLK
+clk => clk_counter[14].CLK
+clk => clk_counter[15].CLK
+clk => clk_counter[16].CLK
+clk => clk_counter[17].CLK
+clk => clk_counter[18].CLK
+clk => clk_counter[19].CLK
+clk => clk_counter[20].CLK
+clk => clk_counter[21].CLK
+clk => clk_counter[22].CLK
+clk => clk_counter[23].CLK
+clk => clk_counter[24].CLK
+clk => clk_counter[25].CLK
+clk_out <= clk_counter[25].DB_MAX_OUTPUT_PORT_TYPE
+clk_out2 <= clk_counter[23].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|semaforo_cruzamento_completo:semaforo
+clk => Mux0.IN7
+clk => Mux1.IN7
+clk => count[0].CLK
+clk => count[1].CLK
+clk => count[2].CLK
+clk => count[3].CLK
+clk => state_reg[0].CLK
+clk => state_reg[1].CLK
+clk => state_reg[2].CLK
+reset => count[0].ACLR
+reset => count[1].ACLR
+reset => count[2].ACLR
+reset => count[3].ACLR
+reset => state_reg[0].ACLR
+reset => state_reg[1].ACLR
+reset => state_reg[2].ACLR
+botao_A => always0.IN1
+botao_B => always0.IN1
+light_A[0] <= Decoder2.DB_MAX_OUTPUT_PORT_TYPE
+light_A[1] <= Decoder2.DB_MAX_OUTPUT_PORT_TYPE
+light_A[2] <= Decoder1.DB_MAX_OUTPUT_PORT_TYPE
+light_B[0] <= Decoder2.DB_MAX_OUTPUT_PORT_TYPE
+light_B[1] <= Decoder2.DB_MAX_OUTPUT_PORT_TYPE
+light_B[2] <= Decoder1.DB_MAX_OUTPUT_PORT_TYPE
+p_light_A[0] <= Decoder1.DB_MAX_OUTPUT_PORT_TYPE
+p_light_A[1] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+p_light_B[0] <= Decoder1.DB_MAX_OUTPUT_PORT_TYPE
+p_light_B[1] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+
+
