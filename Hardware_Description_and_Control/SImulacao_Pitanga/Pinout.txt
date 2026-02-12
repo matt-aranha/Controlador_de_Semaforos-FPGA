@@ -1,0 +1,23 @@
+// (c) 2025 inPlace Design Automation
+// Descrição : arquivo de pinagem contendo o mapeamento do módulo counter2b para
+//             a placa T (T-board).
+//  MODULE PORT     BOARD COMPONENT
+    clk         =   clk_1hz;
+    reset       =   btn0;
+    botao_A     =   btn1;
+    botao_B     =   btn2;
+
+// Mapeamento dos bits de saída do contador para os LEDs
+    light_A_GREEN  =  led0;         //Representa o semáforo de carro A, caso esteja verde
+    light_A_YELLOW =  led1;         //Representa o semáforo de carro A, caso esteja amarelo
+    light_A_RED    =  led2;         //Representa o semáforo de carro A, caso esteja vermelho
+    
+    light_B_GREEN  =  led3;         //Representa o semáforo de carro B, caso esteja verde
+    light_B_YELLOW =  led4;         //Representa o semáforo de carro B, caso esteja amarelo
+    light_B_RED    =  led5;         //Representa o semáforo de carro B, caso esteja vermelho
+
+    p_light_A_GREEN=   segd0.a_on;   //Representa o semáforo de pedreste A, caso esteja verde
+    p_light_A_RED  =   segd0.d_on;   //Representa o semáforo de pedreste A, caso esteja vermelho
+
+    p_light_B_GREEN=   segd1.a_on;   //Representa o semáforo de pedreste B, caso esteja verde
+    p_light_B_RED=   segd1.d_on;     //Representa o semáforo de pedreste B, caso esteja vermelho
