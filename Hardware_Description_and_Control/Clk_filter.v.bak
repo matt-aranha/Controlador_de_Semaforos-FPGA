@@ -1,0 +1,12 @@
+module clk_filter(
+input wire clk,
+output reg clk_out, clk_out2);
+
+reg [25:0] clk_counter; 
+
+always @(posedge clk_50MHz) begin
+	clk_counter <= clk_counter+1;
+end
+
+clk_out = clk_counter[25];
+clk_out2 = clk_counter[23];
