@@ -1,18 +1,24 @@
+<div align="center">
+
 # Controlador FPGA – Semáforo com Prioridade de Pedestre 🚦🚸
+
+![UFS](https://img.shields.io/badge/Universidade_Federal_de_Sergipe-UFS-005CA9?style=for-the-badge&logo=unacademy&logoColor=white)
+![CoreTech](https://img.shields.io/badge/Liga-Hardware_&_Robótica-orange?style=for-the-badge)
+
+
 
 #### Este projeto foi desenvolvido como conclusão do trainee da **Liga de Hardware e Robótica da UFS** — **CoreTech®**
 
 **Proposta:**
 Implementar, em FPGA, um controlador de semáforo que gerencia um cruzamento simples, priorizando a travessia de pedestres quando botão for pressionado. Arquitetura baseada em máquina de estados implementada em Verilog.
 
+</div>
+­
 
 ## 👥 Equipe
 
-- Eduardo Souza ([EdmSouza](https://github.com/EdmSouza))
-- Gustavo Gomes  
-- Lucas Santana ([Lucas Leal](https://github.com/LucaskaSL))
-- Mateus Aranha ([matt-aranha](https://github.com/matt-aranha))
-- Paulo Medeiros ([PauloBaja](https://github.com/PauloBaja))
+*Eduardo Souza ([EdmSouza](https://github.com/EdmSouza))*  ㅤ ­  **|**  ­  *Gustavo Gomes ([Gustavo0022](https://github.com/Gustavo0022))*  ­  **|**  ­  *Lucas Santana ([Lucas Leal](https://github.com/LucaskaSL))* <br>
+*Mateus Aranha ([matt-aranha](https://github.com/matt-aranha))*  ­  **|**  ­  *Paulo Medeiros ([PauloBaja](https://github.com/PauloBaja))*
 
 
 ---
@@ -20,7 +26,7 @@ Implementar, em FPGA, um controlador de semáforo que gerencia um cruzamento sim
 
 ## 🧮 Concepção & Planejamento
 
-A fim de solucionar o ***longo tempo de espera descoordenado entre semáforos***, foi planejado um sistema *on-demand* — acionado por botão — que prioriza o fluxo contínuo do trânsito, o interrompendo apenas ***quando há pedestres (Esquemático abaixo).***
+A fim de solucionar o ***longo tempo de espera descoordenado entre semáforos***, foi planejado um sistema *on-demand* — acionado por botão — que prioriza o fluxo contínuo do trânsito, o interrompendo após certo tempo para uma via, ou quando há pedestres (Esquemático abaixo).
 
 Os carros na horizontal permanecem na mesma via, enquanto os da vertical, irão realizar uma curva 90° à direita. Dessa forma, os semáforos para veículos nessas duas vias permaneçam necessariamente em estados diferentes, para que seja coordenado a travessia dos transeuntes.
 
