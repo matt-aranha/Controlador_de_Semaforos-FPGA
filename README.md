@@ -9,7 +9,7 @@ Implementar, em FPGA, um controlador de semáforo que gerencia um cruzamento sim
 ## 👥 Equipe
 
 - Eduardo Souza ([EdmSouza](https://github.com/EdmSouza))
-- Gustavo Gomes  
+- Gustavo Gomes ([Gustavo0022](https://github.com/Gustavo0022))
 - Lucas Santana ([Lucas Leal](https://github.com/LucaskaSL))
 - Mateus Aranha ([matt-aranha](https://github.com/matt-aranha))
 - Paulo Medeiros ([PauloBaja](https://github.com/PauloBaja))
@@ -20,7 +20,7 @@ Implementar, em FPGA, um controlador de semáforo que gerencia um cruzamento sim
 
 ## 🧮 Concepção & Planejamento
 
-A fim de solucionar o ***longo tempo de espera descoordenado entre semáforos***, foi planejado um sistema *on-demand* — acionado por botão — que prioriza o fluxo contínuo do trânsito, o interrompendo apenas ***quando há pedestres (Esquemático abaixo).***
+A fim de solucionar o ***longo tempo de espera descoordenado entre semáforos***, foi planejado um sistema *on-demand* — acionado por botão — que prioriza o fluxo contínuo do trânsito, o interrompendo após certo tempo para uma via, ou quando há pedestres (Esquemático abaixo).
 
 Os carros na horizontal permanecem na mesma via, enquanto os da vertical, irão realizar uma curva 90° à direita. Dessa forma, os semáforos para veículos nessas duas vias permaneçam necessariamente em estados diferentes, para que seja coordenado a travessia dos transeuntes.
 
