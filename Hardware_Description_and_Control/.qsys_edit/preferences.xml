@@ -9,11 +9,11 @@
  </systemtable>
  <clocktable>
   <columns>
-   <clockname preferredWidth="262" />
-   <clocksource preferredWidth="262" />
-   <frequency preferredWidth="242" />
+   <clockname preferredWidth="523" />
+   <clocksource preferredWidth="522" />
+   <frequency preferredWidth="503" />
   </columns>
  </clocktable>
- <library expandedCategories="Library,Project" />
- <window width="1100" height="800" x="52" y="20" />
+ <library expandedCategories="Project,Library" />
+ <window width="1882" height="1077" x="52" y="20" />
 </preferences>

@@ -1,5 +1,5 @@
 EDA Netlist Writer report for ContorladorusFPGArusCoretrecus
-Wed Feb 11 18:50:14 2026
+Mon Feb 16 12:11:08 2026
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Wed Feb 11 18:50:14 2026 ;
+; EDA Netlist Writer Status ; Successful - Mon Feb 16 12:11:08 2026 ;
 ; Revision Name             ; ContorladorusFPGArusCoretrecus        ;
 ; Top-level Entity Name     ; top                                   ;
 ; Family                    ; Cyclone II                            ;
@@ -66,16 +66,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                                              ;
-+-------------------------------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                                         ;
-+-------------------------------------------------------------------------------------------------------------------------+
-; /home/gustavog/Documentos/coretech - projeto/coretrecus/simulation/modelsim/ContorladorusFPGArusCoretrecus.vho          ;
-; /home/gustavog/Documentos/coretech - projeto/coretrecus/simulation/modelsim/ContorladorusFPGArusCoretrecus_fast.vho     ;
-; /home/gustavog/Documentos/coretech - projeto/coretrecus/simulation/modelsim/ContorladorusFPGArusCoretrecus_vhd.sdo      ;
-; /home/gustavog/Documentos/coretech - projeto/coretrecus/simulation/modelsim/ContorladorusFPGArusCoretrecus_vhd_fast.sdo ;
-+-------------------------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                                                                        ;
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                                                                   ;
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; /home/gustavog/Git/Controlador_de_Semaforos-FPGA/Hardware_Description_and_Control/simulation/modelsim/ContorladorusFPGArusCoretrecus.vho          ;
+; /home/gustavog/Git/Controlador_de_Semaforos-FPGA/Hardware_Description_and_Control/simulation/modelsim/ContorladorusFPGArusCoretrecus_fast.vho     ;
+; /home/gustavog/Git/Controlador_de_Semaforos-FPGA/Hardware_Description_and_Control/simulation/modelsim/ContorladorusFPGArusCoretrecus_vhd.sdo      ;
+; /home/gustavog/Git/Controlador_de_Semaforos-FPGA/Hardware_Description_and_Control/simulation/modelsim/ContorladorusFPGArusCoretrecus_vhd_fast.sdo ;
++---------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -84,12 +84,12 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 32-bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Feb 11 18:50:13 2026
+    Info: Processing started: Mon Feb 16 12:11:07 2026
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off ContorladorusFPGArusCoretrecus -c ContorladorusFPGArusCoretrecus
-Info (204026): Generated files "ContorladorusFPGArusCoretrecus.vho", "ContorladorusFPGArusCoretrecus_fast.vho", "ContorladorusFPGArusCoretrecus_vhd.sdo" and "ContorladorusFPGArusCoretrecus_vhd_fast.sdo" in directory "/home/gustavog/Documentos/coretech - projeto/coretrecus/simulation/modelsim/" for EDA simulation tool
+Info (204026): Generated files "ContorladorusFPGArusCoretrecus.vho", "ContorladorusFPGArusCoretrecus_fast.vho", "ContorladorusFPGArusCoretrecus_vhd.sdo" and "ContorladorusFPGArusCoretrecus_vhd_fast.sdo" in directory "/home/gustavog/Git/Controlador_de_Semaforos-FPGA/Hardware_Description_and_Control/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 32-bit EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 319 megabytes
-    Info: Processing ended: Wed Feb 11 18:50:14 2026
+    Info: Processing ended: Mon Feb 16 12:11:08 2026
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
