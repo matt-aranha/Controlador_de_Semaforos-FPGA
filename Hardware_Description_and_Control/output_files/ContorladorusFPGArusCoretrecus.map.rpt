@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ContorladorusFPGArusCoretrecus
-Wed Feb 11 18:49:56 2026
+Mon Feb 16 12:10:50 2026
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -16,11 +16,9 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   8. Registers Removed During Synthesis
   9. General Register Statistics
  10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for User Entity Instance: semaforo_cruzamento_completo:semaforo
- 12. Port Connectivity Checks: "semaforo_cruzamento_completo:semaforo"
- 13. Port Connectivity Checks: "clk_filter:clock_filter"
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+ 11. Parameter Settings for User Entity Instance: semaforo_cruzamento_otimizado:semaforo
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -46,16 +44,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Feb 11 18:49:56 2026           ;
+; Analysis & Synthesis Status        ; Successful - Mon Feb 16 12:10:50 2026           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; ContorladorusFPGArusCoretrecus                  ;
 ; Top-level Entity Name              ; top                                             ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 42                                              ;
-;     Total combinational functions  ; 42                                              ;
-;     Dedicated logic registers      ; 31                                              ;
-; Total registers                    ; 31                                              ;
-; Total pins                         ; 33                                              ;
+; Total logic elements               ; 43                                              ;
+;     Total combinational functions  ; 43                                              ;
+;     Dedicated logic registers      ; 32                                              ;
+; Total registers                    ; 32                                              ;
+; Total pins                         ; 47                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -159,15 +157,15 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                         ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                           ; Library ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------------------+---------+
-; Clk_filter.v                     ; yes             ; User Verilog HDL File  ; /home/gustavog/Documentos/coretech - projeto/coretrecus/Clk_filter.v                   ;         ;
-; semaforo_cruzamento_completo.v   ; yes             ; User Verilog HDL File  ; /home/gustavog/Documentos/coretech - projeto/coretrecus/semaforo_cruzamento_completo.v ;         ;
-; top.v                            ; yes             ; User Verilog HDL File  ; /home/gustavog/Documentos/coretech - projeto/coretrecus/top.v                          ;         ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                   ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                                     ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------------------+---------+
+; Clk_filter.v                     ; yes             ; User Verilog HDL File  ; /home/gustavog/Git/Controlador_de_Semaforos-FPGA/Hardware_Description_and_Control/Clk_filter.v                   ;         ;
+; semaforo_cruzamento_completo.v   ; yes             ; User Verilog HDL File  ; /home/gustavog/Git/Controlador_de_Semaforos-FPGA/Hardware_Description_and_Control/semaforo_cruzamento_completo.v ;         ;
+; top.v                            ; yes             ; User Verilog HDL File  ; /home/gustavog/Git/Controlador_de_Semaforos-FPGA/Hardware_Description_and_Control/top.v                          ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------+
@@ -175,52 +173,51 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+----------+
 ; Resource                                    ; Usage    ;
 +---------------------------------------------+----------+
-; Estimated Total logic elements              ; 42       ;
+; Estimated Total logic elements              ; 43       ;
 ;                                             ;          ;
-; Total combinational functions               ; 42       ;
+; Total combinational functions               ; 43       ;
 ; Logic element usage by number of LUT inputs ;          ;
-;     -- 4 input functions                    ; 6        ;
+;     -- 4 input functions                    ; 7        ;
 ;     -- 3 input functions                    ; 6        ;
 ;     -- <=2 input functions                  ; 30       ;
 ;                                             ;          ;
 ; Logic elements by mode                      ;          ;
-;     -- normal mode                          ; 18       ;
+;     -- normal mode                          ; 19       ;
 ;     -- arithmetic mode                      ; 24       ;
 ;                                             ;          ;
-; Total registers                             ; 31       ;
-;     -- Dedicated logic registers            ; 31       ;
+; Total registers                             ; 32       ;
+;     -- Dedicated logic registers            ; 32       ;
 ;     -- I/O registers                        ; 0        ;
 ;                                             ;          ;
-; I/O pins                                    ; 33       ;
+; I/O pins                                    ; 47       ;
 ; Embedded Multiplier 9-bit elements          ; 0        ;
 ; Maximum fan-out node                        ; CLOCK_50 ;
 ; Maximum fan-out                             ; 26       ;
-; Total fan-out                               ; 177      ;
-; Average fan-out                             ; 1.67     ;
+; Total fan-out                               ; 188      ;
+; Average fan-out                             ; 1.54     ;
 +---------------------------------------------+----------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                ;
-+--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------+--------------+
-; Compilation Hierarchy Node                 ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                        ; Library Name ;
-+--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------+--------------+
-; |top                                       ; 42 (0)            ; 31 (0)       ; 0           ; 0            ; 0       ; 0         ; 33   ; 0            ; |top                                       ; work         ;
-;    |clk_filter:clock_filter|               ; 26 (26)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|clk_filter:clock_filter               ; work         ;
-;    |semaforo_cruzamento_completo:semaforo| ; 16 (16)           ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|semaforo_cruzamento_completo:semaforo ; work         ;
-+--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                  ;
++---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+--------------+
+; Compilation Hierarchy Node                  ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                         ; Library Name ;
++---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+--------------+
+; |top                                        ; 43 (0)            ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 47   ; 0            ; |top                                        ; work         ;
+;    |clk_filter:clock_filter|                ; 26 (26)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|clk_filter:clock_filter                ; work         ;
+;    |semaforo_cruzamento_otimizado:semaforo| ; 17 (17)           ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|semaforo_cruzamento_otimizado:semaforo ; work         ;
++---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                          ;
-+----------------------------------------------------+----------------------------------------+
-; Register name                                      ; Reason for Removal                     ;
-+----------------------------------------------------+----------------------------------------+
-; semaforo_cruzamento_completo:semaforo|state_reg[2] ; Stuck at GND due to stuck port data_in ;
-; semaforo_cruzamento_completo:semaforo|count[3]     ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 2              ;                                        ;
-+----------------------------------------------------+----------------------------------------+
++--------------------------------------------------------------+
+; Registers Removed During Synthesis                           ;
++-----------------------------------------+--------------------+
+; Register name                           ; Reason for Removal ;
++-----------------------------------------+--------------------+
+; clk_filter:clock_filter|clk_counter[26] ; Lost fanout        ;
+; Total Number of Removed Registers = 1   ;                    ;
++-----------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -228,54 +225,36 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 31    ;
+; Total registers                              ; 32    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 5     ;
+; Number of registers using Asynchronous Clear ; 6     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top|semaforo_cruzamento_completo:semaforo|count[3] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top|semaforo_cruzamento_otimizado:semaforo|count[3] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: semaforo_cruzamento_completo:semaforo ;
-+----------------+-------+-----------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                      ;
-+----------------+-------+-----------------------------------------------------------+
-; A_VERDE        ; 000   ; Unsigned Binary                                           ;
-; A_AMARELO      ; 001   ; Unsigned Binary                                           ;
-; B_VERDE        ; 010   ; Unsigned Binary                                           ;
-; B_AMARELO      ; 011   ; Unsigned Binary                                           ;
-+----------------+-------+-----------------------------------------------------------+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: semaforo_cruzamento_otimizado:semaforo ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; A_VERDE        ; 00    ; Unsigned Binary                                            ;
+; A_AMARELO      ; 01    ; Unsigned Binary                                            ;
+; B_VERDE        ; 10    ; Unsigned Binary                                            ;
+; B_AMARELO      ; 11    ; Unsigned Binary                                            ;
++----------------+-------+------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "semaforo_cruzamento_completo:semaforo"                                                                                                                                   ;
-+---------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                                                                                                               ;
-+---------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; light_B ; Output ; Warning  ; Output or bidir port (3 bits) is smaller than the port expression (4 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND. ;
-+---------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "clk_filter:clock_filter"                                                                                     ;
-+----------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                                                  ;
-+----------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; clk_out2 ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+----------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -293,51 +272,51 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Feb 11 18:49:55 2026
+    Info: Processing started: Mon Feb 16 12:10:49 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ContorladorusFPGArusCoretrecus -c ContorladorusFPGArusCoretrecus
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file Clk_filter.v
     Info (12023): Found entity 1: clk_filter
-Warning (10229): Verilog HDL Expression warning at semaforo_cruzamento_completo.v(23): truncated literal to match 4 bits
 Info (12021): Found 1 design units, including 1 entities, in source file semaforo_cruzamento_completo.v
-    Info (12023): Found entity 1: semaforo_cruzamento_completo
+    Info (12023): Found entity 1: semaforo_cruzamento_otimizado
+Warning (10275): Verilog HDL Module Instantiation warning at top.v(34): ignored dangling comma in List of Port Connections
 Info (12021): Found 1 design units, including 1 entities, in source file top.v
     Info (12023): Found entity 1: top
 Info (12127): Elaborating entity "top" for the top level hierarchy
+Warning (10034): Output port "LEDG[9..4]" at top.v(4) has no driver
 Info (12128): Elaborating entity "clk_filter" for hierarchy "clk_filter:clock_filter"
-Warning (10230): Verilog HDL assignment warning at Clk_filter.v(8): truncated value with size 32 to match size of target (26)
-Info (12128): Elaborating entity "semaforo_cruzamento_completo" for hierarchy "semaforo_cruzamento_completo:semaforo"
-Warning (10230): Verilog HDL assignment warning at semaforo_cruzamento_completo.v(33): truncated value with size 32 to match size of target (4)
-Warning (10270): Verilog HDL Case Statement warning at semaforo_cruzamento_completo.v(62): incomplete case statement has no default case item
-Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (10230): Verilog HDL assignment warning at Clk_filter.v(9): truncated value with size 32 to match size of target (27)
+Info (12128): Elaborating entity "semaforo_cruzamento_otimizado" for hierarchy "semaforo_cruzamento_otimizado:semaforo"
+Warning (10036): Verilog HDL or VHDL warning at semaforo_cruzamento_completo.v(31): object "pisca" assigned a value but never read
+Warning (10230): Verilog HDL assignment warning at semaforo_cruzamento_completo.v(40): truncated value with size 32 to match size of target (4)
 Warning (13034): The following nodes have both tri-state and non-tri-state drivers
-    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO_0[8]" and its non-tri-state driver.
-    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO_0[9]" and its non-tri-state driver.
-    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO_0[10]" and its non-tri-state driver.
     Warning (13035): Inserted always-enabled tri-state buffer between "GPIO_0[12]" and its non-tri-state driver.
     Warning (13035): Inserted always-enabled tri-state buffer between "GPIO_0[13]" and its non-tri-state driver.
-    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO_0[18]" and its non-tri-state driver.
-    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO_0[19]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO_0[14]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO_0[16]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO_0[17]" and its non-tri-state driver.
     Warning (13035): Inserted always-enabled tri-state buffer between "GPIO_0[20]" and its non-tri-state driver.
-    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO_0[23]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO_0[21]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO_0[22]" and its non-tri-state driver.
     Warning (13035): Inserted always-enabled tri-state buffer between "GPIO_0[24]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO_0[25]" and its non-tri-state driver.
 Warning (13039): The following bidir pins have no drivers
-    Warning (13040): Bidir "GPIO_0[0]" has no driver
     Warning (13040): Bidir "GPIO_0[1]" has no driver
     Warning (13040): Bidir "GPIO_0[2]" has no driver
-    Warning (13040): Bidir "GPIO_0[21]" has no driver
+    Warning (13040): Bidir "GPIO_0[0]" has no driver
     Warning (13040): Bidir "GPIO_0[3]" has no driver
     Warning (13040): Bidir "GPIO_0[4]" has no driver
     Warning (13040): Bidir "GPIO_0[5]" has no driver
     Warning (13040): Bidir "GPIO_0[6]" has no driver
     Warning (13040): Bidir "GPIO_0[7]" has no driver
+    Warning (13040): Bidir "GPIO_0[8]" has no driver
+    Warning (13040): Bidir "GPIO_0[9]" has no driver
+    Warning (13040): Bidir "GPIO_0[10]" has no driver
     Warning (13040): Bidir "GPIO_0[11]" has no driver
-    Warning (13040): Bidir "GPIO_0[14]" has no driver
     Warning (13040): Bidir "GPIO_0[15]" has no driver
-    Warning (13040): Bidir "GPIO_0[16]" has no driver
-    Warning (13040): Bidir "GPIO_0[17]" has no driver
-    Warning (13040): Bidir "GPIO_0[22]" has no driver
-    Warning (13040): Bidir "GPIO_0[25]" has no driver
+    Warning (13040): Bidir "GPIO_0[18]" has no driver
+    Warning (13040): Bidir "GPIO_0[19]" has no driver
+    Warning (13040): Bidir "GPIO_0[23]" has no driver
     Warning (13040): Bidir "GPIO_0[26]" has no driver
     Warning (13040): Bidir "GPIO_0[27]" has no driver
     Warning (13040): Bidir "GPIO_0[28]" has no driver
@@ -345,26 +324,40 @@ Warning (13039): The following bidir pins have no drivers
     Warning (13040): Bidir "GPIO_0[30]" has no driver
     Warning (13040): Bidir "GPIO_0[31]" has no driver
 Warning (13009): TRI or OPNDRN buffers permanently enabled
-    Warning (13010): Node "GPIO_0[8]~synth"
-    Warning (13010): Node "GPIO_0[9]~synth"
-    Warning (13010): Node "GPIO_0[10]~synth"
     Warning (13010): Node "GPIO_0[12]~synth"
     Warning (13010): Node "GPIO_0[13]~synth"
-    Warning (13010): Node "GPIO_0[18]~synth"
-    Warning (13010): Node "GPIO_0[19]~synth"
+    Warning (13010): Node "GPIO_0[14]~synth"
+    Warning (13010): Node "GPIO_0[16]~synth"
+    Warning (13010): Node "GPIO_0[17]~synth"
     Warning (13010): Node "GPIO_0[20]~synth"
-    Warning (13010): Node "GPIO_0[23]~synth"
+    Warning (13010): Node "GPIO_0[21]~synth"
+    Warning (13010): Node "GPIO_0[22]~synth"
     Warning (13010): Node "GPIO_0[24]~synth"
+    Warning (13010): Node "GPIO_0[25]~synth"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDG[4]" is stuck at GND
+    Warning (13410): Pin "LEDG[5]" is stuck at GND
+    Warning (13410): Pin "LEDG[6]" is stuck at GND
+    Warning (13410): Pin "LEDG[7]" is stuck at GND
+    Warning (13410): Pin "LEDG[8]" is stuck at GND
+    Warning (13410): Pin "LEDG[9]" is stuck at GND
+Warning (18029): Output pin "LEDG[2]" driven by bidirectional pin "GPIO_0[1]" cannot be tri-stated
+Warning (18029): Output pin "LEDG[3]" driven by bidirectional pin "GPIO_0[2]" cannot be tri-stated
+Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 75 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 1 input pins
-    Info (21059): Implemented 0 output pins
+Warning (21074): Design contains 3 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[1]"
+    Warning (15610): No output dependent on input pin "KEY[2]"
+    Warning (15610): No output dependent on input pin "KEY[3]"
+Info (21057): Implemented 90 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 10 output pins
     Info (21060): Implemented 32 bidirectional pins
-    Info (21061): Implemented 42 logic cells
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 51 warnings
+    Info (21061): Implemented 43 logic cells
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 64 warnings
     Info: Peak virtual memory: 342 megabytes
-    Info: Processing ended: Wed Feb 11 18:49:56 2026
+    Info: Processing ended: Mon Feb 16 12:10:50 2026
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:02
 

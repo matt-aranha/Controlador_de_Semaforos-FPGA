@@ -1,0 +1,7 @@
+
+State Machine - |top|semaforo_cruzamento_otimizado:semaforo|state_reg
+Name state_reg.B_AMARELO state_reg.B_VERDE state_reg.A_AMARELO state_reg.A_VERDE 
+state_reg.A_VERDE 0 0 0 0 
+state_reg.A_AMARELO 0 0 1 1 
+state_reg.B_VERDE 0 1 0 1 
+state_reg.B_AMARELO 1 0 0 1 

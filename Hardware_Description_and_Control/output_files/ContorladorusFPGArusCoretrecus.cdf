@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP2C35F672) Path("/home/gustavog/Documentos/coretech - projeto/coretrecus/output_files/") File("ContorladorusFPGArusCoretrecus.sof") MfrSpec(OpMask(1));
+		Device PartName(EP2C35F672) Path("/home/aluno/Downloads/Trainee-CoreTech-main/Hardware_Description_and_Control/output_files/") File("ContorladorusFPGArusCoretrecus.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
